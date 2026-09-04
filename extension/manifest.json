@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "JobCraft 官网填写助手",
+  "version": "1.0.0",
+  "description": "仅在 Moka 与蚂蚁招聘官网填写非敏感基础字段，绝不点击最终提交。",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://app.mokahr.com/*",
+    "https://talent.antgroup.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "JobCraft 填写助手"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.mokahr.com/*",
+        "https://talent.antgroup.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE `resume_review` ADD `template` text DEFAULT 'ats' NOT NULL;
